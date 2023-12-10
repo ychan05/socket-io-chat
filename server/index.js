@@ -10,7 +10,7 @@ app.use(cors());
 const httpServer = http.createServer(app); // create a http server
 const io = new Server(httpServer, { // create a socket io server
     cors: { // cors configuration
-        origin: 'http://localhost:54321', // where the react app is hosted
+        origin: 'http://localhost:3000', // where the client is connected from
         methods: ['GET', 'POST'] // allowed methods
     }
 });
