@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const http = require('http');
-const cors = require('cors'); 
+const cors = require('cors');
 const {Server} = require('socket.io');
 
 app.use(cors());
@@ -9,7 +9,7 @@ app.use(cors());
 
 const httpServer = http.createServer(app); // create a http server
 const io = new Server(httpServer, { // create a socket io server
-    cors: {
+    cors: { // cors configuration
         origin: 'http://localhost:54321', // where the react app is hosted
         methods: ['GET', 'POST'] // allowed methods
     }
